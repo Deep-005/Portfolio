@@ -1,0 +1,770 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'images/portfolio.ico' %}" type="image/x-icon">
+
+  <!-- My css link -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <!-- Google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Main -->
+
+  <main>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="{% static 'images/profile.jpg' %}" alt="Deepak Negi" width="80" 
+            id="profileImage" onclick="openModal()">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Deepak Negi">Deepak Negi</h1>
+
+          <p class="title">Developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:negideepak8439@gmail.com" class="contact-link">negideepak8439@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+91-8273233560" class="contact-link">+91 8273233560</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+              <time datetime="2003-06-05">June 05, 2003</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Mohali, Punjab, India</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/deepak-negi-114797313/" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/Deep-005" class="social-link" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://wa.link/v6yctm" class="social-link" target="_blank">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+    <!-- Main-Content -->
+
+    <div class="main-content">
+
+      <!-- Navbar -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Certificates</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+      <!-- About -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I am a passionate Developer and IT student currently pursuing my postgraduate
+            studies, with a strong interest in web and mobile application development. 
+            My journey in technology has honed my skills in problem-solving and data management, 
+            allowing me to create user-friendly and visually appealing solutions.
+          </p>
+
+          <p>
+            I pride myself on my strong work ethic and dedication to excellence, always 
+            striving to understand and fulfill client needs. I am eager to collaborate with 
+            innovative teams and contribute to projects that make a meaningful impact. 
+            I look forward to growing in a dynamic environment that values creativity 
+            and technical expertise.
+          </p>
+        </section>
+
+
+        <!-- Service -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What I do</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="{% static 'images/icon-design.svg' %}" alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">UI design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="{% static 'images/icon-dev.svg' %}" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">FullStack development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="{% static 'images/icon-app.svg' %}" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile Apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="{% static 'images/icon-python.png' %}" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Python Developer</h4>
+
+                <p class="service-item-text">
+                  I work with python to develop new technnologies.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!-- Testimonials -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <div class="slider">
+
+              <div class="slide">
+                <div class="testimonial">
+                  <blockquote>“ Deepak is a remarkably hard-working and smart student. 
+                    His dedication to mastering Android development at 
+                    FebTech IT Solutions was inspiring.<br> He consistently 
+                    delivered excellent work and shows great promise 
+                    for a brilliant career.”</blockquote>
+                  <p class="author">Rajat Verma
+                    <span>Managing Director @ Feb Tech IT</span>
+                    <a href="https://www.linkedin.com/in/rajat-verma-505a421b4/">View Linkedin</a>
+                  </p>
+                </div>
+
+                <div class="slider-img">
+                  <img src="{% static 'images/febtech.webp' %}" alt="Author Image">
+                </div>
+
+              </div>
+
+              <div class="slide">
+                <div class="testimonial">
+                  <blockquote>“It was a pleasure collaborating with Deepak at Thinknext.
+                     He is a smart, incredibly hard-working developer whose dedication 
+                     to mastering fullstack with Python was impressive. His talent and work 
+                     ethic will make him a valuable asset to any team.”</blockquote>
+                  <p class="author">Kishor Chandra
+                    <span>Fullstack Developer</span>
+                    <a href="https://www.linkedin.com/in/kishor-chandra-sati-2b9a99320/">View Linkedin</a>
+                  </p>
+                </div>
+
+                <div class="slider-img">
+                  <img src="{% static 'images/friend.jpg' %}" alt="Author Image">
+                </div>
+
+              </div>
+
+              <div class="slide">
+                <div class="testimonial">
+                  <blockquote>“ Deepak is an exceptionally hard-working and intelligent student 
+                    who excelled in Fullstack Python development at Thinknext Technologies. 
+                    His dedication and sharp problem-solving skills were outstanding. 
+                    Deepak shows immense promise for a successful career in technology. ”</blockquote>
+                  <p class="author">Tushar Devkaran
+                    <span>Python Developer @ Thinknext Technologies</span>
+                    <a href="https://www.linkedin.com/in/tushar-devkaran-76b0951a7/">View Linkedin</a>
+                  </p>
+                </div>
+
+                <div class="slider-img">
+                  <img src="{% static 'images/thinknext.jpg' %}" alt="Author Image">
+                </div>
+
+              </div>
+
+              <div class="buttons">
+                <div class="previous"></div>
+                <div class="next"></div>
+              </div>
+
+          </div>
+
+        </section>
+
+
+      </article>
+
+
+
+      <!-- Resume -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Chandigarh University, Mohali</h4>
+
+              <span>2024 — 2026</span>
+
+              <p class="timeline-text">
+                Pursuing MCA from Chandigarh University, achieving 
+                an impressive overall CGPA of 8.32 in my first year
+                of college. My consistent academic excellence placed me
+                among the top-performing students in my course.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Quantum University, Roorkee</h4>
+
+              <span>2021 — 2024</span>
+
+              <p class="timeline-text">
+                Graduated from Quantum University, with my
+                Bachelor's in Computer Applications (BCA),
+                achieving an impressive overall CGPA of 8.56. My
+                consistent academic excellence placed me among the
+                top-performing students in my course.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Army Public School No.-1, Roorkee</h4>
+
+              <span>2008 — 2020</span>
+
+              <p class="timeline-text">
+                Completed my entire schooling from Army Public School,
+                under the CBSE board, securing an impressive 80%.
+              </p>
+            </li>  
+
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">FullStack Development using Python</h4>
+
+                <span>June - December 2025</span>
+
+                <p class="timeline-text">
+                    I have just completed my internship as a Full Stack Python Developer at 
+                    ThinkNext Technologies Pvt. Ltd. in Mohali from June 2025. During this internship, 
+                    I have enhanced my skills in Python, Django, Object-Oriented Programming (OOP), 
+                    Data Structures and Algorithms (DSA), and various Python libraries.
+                </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">Android Developer</h4>
+
+                <span>May - August 2024</span>
+
+                <p class="timeline-text">
+                    I completed an internship in Android Development at Feb Tech IT Solutions Pvt. Ltd. in Roorkee 
+                    from May to August 2024. Throughout this experience, I gained valuable skills in Android Studio, 
+                    Android OS, Kotlin, XML, SQL, and Firebase.
+                </p>
+
+            </li>
+
+          </ol>
+
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <div class="skills-list content-card">
+
+            <div class="skills-list-item">   
+                <img src="{% static 'images/python.png' %}" alt="Python logo" onerror="this.style.display='none'" />
+                <span>Python</span>
+            </div>
+            <div class="skills-list-item">   
+                <img src="{% static 'images/django.png' %}" alt="Django logo" onerror="this.style.display='none'" />
+                <span>Django</span>
+            </div>
+            <div class="skills-list-item">
+                <img src="{% static 'images/kotlin.png' %}" alt="Kotlin logo" onerror="this.style.display='none'" />
+                <span>Kotlin</span>
+            </div>
+            <div class="skills-list-item">
+                <img src="{% static 'images/php.png' %}" alt="PHP logo" onerror="this.style.display='none'" />
+                <span>PHP</span>
+            </div>
+            <div class="skills-list-item">
+                <img src="{% static 'images/java.png' %}" alt="Java logo" onerror="this.style.display='none'" />
+                <span>Java</span>
+            </div>
+            <div class="skills-list-item">
+                <img src="{% static 'images/html5.png' %}" alt="HTML logo" onerror="this.style.display='none'" />
+                <span>HTML5</span>
+            </div>
+            <div class="skills-list-item">
+                <img src="{% static 'images/css.png' %}" alt="CSS logo" onerror="this.style.display='none'" />
+                <span>CSS</span>
+            </div>
+            <div class="skills-list-item">
+                <img src="{% static 'images/xml.png' %}" alt="XML logo" onerror="this.style.display='none'" />
+                <span>XML</span>
+            </div>
+            <div class="skills-list-item">
+                <img src="{% static 'images/sql.png' %}" alt="SQL logo" onerror="this.style.display='none'" />
+                <span>SQL</span>
+            </div>
+            <div class="skills-list-item">
+                <img src="{% static 'images/docker.png' %}" alt="Docker logo" onerror="this.style.display='none'" />
+                <span>Docker</span>
+            </div>
+            <div class="skills-list-item">   
+                <img src="{% static 'images/git.png' %}" alt="git logo" onerror="this.style.display='none'" />
+                <span>Git</span>
+            </div>
+            <div class="skills-list-item">   
+                <img src="{% static 'images/github.png' %}" alt="github logo" onerror="this.style.display='none'" />
+                <span>Github</span>
+            </div>
+            <div class="skills-list-item">
+                <img src="{% static 'images/msOffice.png' %}" alt="MS-Office logo" onerror="this.style.display='none'" />
+                <span>MS Office</span>
+            </div>
+            <div class="skills-list-item">
+                <img src="{% static 'images/firebase.png' %}" alt="Firebase logo" onerror="this.style.display='none'" />
+                <span>Firebase</span>
+            </div>
+            <div class="skills-list-item">
+                <img src="{% static 'images/android-studio.png' %}" alt="Android-Studio logo" onerror="this.style.display='none'" />
+                <span>Android Studio</span>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="download-cv" 
+          style="margin-top: 5%; display: flex; align-items: center; justify-content: center;">
+            <a href="{% static 'images/resume.pdf' %}" class="download-btn" id="downloadBtn" download>
+              <span class="btn-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+                </svg>
+              </span>
+              <span class="btn-text">Download CV</span>
+            </a>
+        </section>
+
+      </article>
+
+
+
+
+
+      <!-- Portfolio -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="project-list">
+
+            <li class="project-item">
+              <div class="project-container">
+                <div class="project-image">
+                  <img src="{% static 'portfolio/restuarant.png' %}" alt="Fundo Landing Page" loading="lazy">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Happy Hearts</h3>
+                  <p class="project-category">Django Fullstack Website</p>
+                  <p class="project-description">Explore our menu, book your table, and discover the story behind our locally-sourced, crafted dishes.</p>
+                  <div class="btns">
+                      <a href="https://github.com/Deep-005/Restaurant" class="project-link" style="margin-right: 12px;" >View Repo →</a>
+                      <a href="https://restaurant-rt5b.onrender.com/" class="project-link">View Live →</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="project-item">
+              <div class="project-container">
+                <div class="project-image">
+                  <img src="{% static 'portfolio/anniversary.png' %}" alt="Sign-In Form" loading="lazy">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Anniversary Wishes</h3>
+                  <p class="project-category">Django Fullsatck Website</p>
+                  <p class="project-description">Celebrate our journey together with cherished photos, heartfelt stories, and a timeline of our memories.</p>
+                  <div class="btns">
+                    <a href="https://github.com/Deep-005/Anniversary/" class="project-link" style="margin-right: 12px;" >View Repo →</a>
+                    <a href="https://anniversary-evvb.onrender.com/" class="project-link">View Live →</a>
+                  </div>
+                </div>
+              </div>
+            </li>            
+
+            <li class="project-item">
+              <div class="project-container">
+                <div class="project-image">
+                  <img src="{% static 'portfolio/web-1.png' %}" alt="YoAnime Site" loading="lazy">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">YoAnime Site</h3>
+                  <p class="project-category">Web design</p>
+                  <p class="project-description">A modern anime streaming website with user-friendly interface and responsive design.</p>
+                  <div class="btns">
+                    <a href="https://github.com/Deep-005/YoAnime-web-UI" class="project-link" style="margin-right: 12px;" >View Repo →</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="project-item">
+              <div class="project-container">
+                <div class="project-image">
+                  <img src="{% static 'portfolio/ui-3.png' %}" alt="Sign-In Form" loading="lazy">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Sign-In Form</h3>
+                  <p class="project-category">Django SignIn-SignUp form</p>
+                  <p class="project-description">Secure authentication system with Django backend and modern UI.</p>
+                  <div class="btns">
+                    <a href="https://github.com/Deep-005/Modern-login-page" class="project-link" style="margin-right: 12px;" >View Repo →</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="project-item">
+              <div class="project-container">
+                <div class="project-image">
+                  <img src="{% static 'portfolio/learning-1.png' %}" alt="YoAnime Site" loading="lazy">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">E-Learning</h3>
+                  <p class="project-category">Android Application</p>
+                  <p class="project-description">Master new skills anytime with engaging video courses, interactive quizzes, and personalized learning pathways.</p>
+                  <a href="https://github.com/Deep-005/Courses" class="project-link">View Repo →</a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+      <!-- Certificates -->
+
+      <article class="certificates" data-page="certificates">
+
+        <header>
+          <h2 class="h2 article-title">Certificates</h2>
+        </header>
+
+        <section class="certificates-container">
+
+          <div class="box">
+            <img src="{% static 'certificates/certificate1.jpg' %}" alt="certificate-1">
+            <p>FullStack Development Using Python Certificate</p>
+          </div>
+
+          <div class="box">
+            <img src="{% static 'certificates/certificate2.jpg' %}" alt="certificate-2">
+            <p>Android Development Training Certificate</p>
+          </div>
+
+          <div class="box">
+            <img src="{% static 'certificates/certificate3.png' %}" alt="certificate-3">
+            <p>Java Basics Course Certificate</p>
+          </div>
+
+          <div class="box">
+            <img src="{% static 'certificates/certificate4.png' %}" alt="certificate-4">
+            <p>SQL Foundational Test Certificate</p>
+          </div>
+
+          <div class="box">
+            <img src="{% static 'certificates/certificate5.png' %}" alt="certificate-5">
+            <p>Computer Foundational Test Certificate</p>
+          </div>
+
+        </section>
+
+      </article>
+
+
+
+
+      <!-- Contact -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.1708233781574!2d76.7444573756596!3d30.685469474607125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fec10f6719745%3A0x746002de4b79584c!2s183%2C%20Phase%2011%2C%20Sector%2065%2C%20Sahibzada%20Ajit%20Singh%20Nagar%2C%20Punjab%20160062!5e0!3m2!1sen!2sin!4v1764837264723!5m2!1sen!2sin"
+                width="400" height="300"loading="lazy" ></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="/contact/" method="POST" class="form" data-form>
+            {% csrf_token %}
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span><b>Send Message</b></span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <!-- Pop-up image -->
+  <div class="image-modal" id="profileModal">
+    <span class="modal-close" id="modalClose">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div class="modal-caption" id="modalCaption"></div>
+  </div>
+
+
+  <!-- My js link -->
+  <script src="{% static 'js/script.js' %}"></script>
+
+  <!-- Ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
